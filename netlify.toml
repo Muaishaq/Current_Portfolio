@@ -1,0 +1,16 @@
+# Netlify config — works out of the box after cloning from GitHub.
+# TanStack Start uses Nitro under the hood; the `netlify` preset emits
+# the right edge functions + static publish folder.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
