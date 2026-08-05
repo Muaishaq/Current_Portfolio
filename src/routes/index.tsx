@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "AI/ML Engineer, Full-Stack Developer, and First Class Computer Science graduate from FUDMA. Builder of TechTrust AI. Available for opportunities.",
+          "AI/ML Engineer, Full-Stack Engineer, and Second Class Upper Computer Science graduate (CGPA 4.39) from FUDMA. Builder of TechTrust AI. Available for opportunities.",
       },
       { property: "og:title", content: "Muhammed Ishaq — AI Engineer & Full-stack engineer" },
       {
@@ -34,20 +34,60 @@ export const Route = createFileRoute("/")({
 
 const skillGroups = [
   {
-    title: "AI & Intelligence",
+    title: "AI/ML Engineering",
     items: [
-      { name: "AI & Machine Learning", level: 82 },
-      { name: "MindSpore / MLP", level: 80 },
+      { name: "Model Training (Python)", level: 84 },
+      { name: "MindSpore / MLP Neural Nets", level: 80 },
     ],
-    chips: ["MindSpore", "MLP Neural Nets", "Python", "AI Engineering"],
+    chips: [
+      "Python",
+      "Huawei MindSpore",
+      "MLP Neural Nets",
+      "NumPy / Pandas",
+      "Feature Engineering",
+      "Model Evaluation",
+    ],
   },
   {
-    title: "Core Engineering",
+    title: "AI & Applied Development",
     items: [
-      { name: "Back-End Development", level: 80 },
-      { name: "Front-End Development", level: 90 },
+      { name: "Prompt Engineering", level: 92 },
+      { name: "Vibe Coding (AI-assisted dev)", level: 90 },
     ],
-    chips: ["Node.js", "Express", "MongoDB", "React", "TypeScript", "Tailwind"],
+    chips: [
+      "Prompt Engineering",
+      "Vibe Coding",
+      "Natural Language Dev Workflows",
+      "AI Pair Programming",
+      "Rapid Prototyping",
+    ],
+  },
+  {
+    title: "Full-Stack Engineering",
+    items: [
+      { name: "Front-End Development", level: 90 },
+      { name: "Back-End Development", level: 80 },
+    ],
+    chips: [
+      "Clean Architecture",
+      "API Design",
+      "Server & State Management",
+      "Database Modelling",
+      "System Integration",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Tailwind",
+      "Node.js",
+      "Express",
+      "PHP",
+      "Java",
+      "C++",
+      "MySQL",
+      "MongoDB",
+    ],
   },
   {
     title: "Data, Security & Markets",
@@ -56,13 +96,13 @@ const skillGroups = [
       { name: "Security & Systems", level: 72 },
       { name: "Forex Trading", level: 85 },
     ],
-    chips: ["Data Mining", "Cybersecurity", "Cloud", "Technical Analysis"],
+    chips: ["Data Mining", "Cybersecurity", "Cloud Computing", "Systems Analysis", "Technical Analysis"],
   },
 ];
 
 type ProjectLink = { label: string; url: string };
 type Project = {
-  category: "Personal" | "Client" | "Course";
+  category: "Personal" | "Client" | "Course" | "Lovable";
   year: string;
   title: string;
   blurb: string;
@@ -103,7 +143,10 @@ const projects: Project[] = [
     blurb:
       "ANN-powered customer churn prediction system with explainable AI — interpretable feature attributions, batch scoring, and an analyst dashboard.",
     stack: ["TensorFlow/Keras", "React", "Explainable AI"],
-    links: [{ label: "GitHub", url: "https://github.com/Muaishaq/churn-mua" }],
+    links: [
+      { label: "Live", url: "https://churn-mua.lovable.app" },
+      { label: "GitHub", url: "https://github.com/Muaishaq/churn-mua" },
+    ],
   },
   {
     category: "Personal",
@@ -112,7 +155,10 @@ const projects: Project[] = [
     blurb:
       "Site for the inaugural FUDMA state-wide Tech Innovation Hackathon — 5 tracks, 4 stages. Built as part of the organising team during my NACOS presidency.",
     stack: ["React", "TypeScript", "Tailwind"],
-    links: [{ label: "GitHub", url: "https://github.com/Muaishaq/fudma-forge" }],
+    links: [
+      { label: "Live", url: "https://nacosfdm-hackathon.lovable.app" },
+      { label: "GitHub", url: "https://github.com/Muaishaq/fudma-forge" },
+    ],
   },
 
   // ── Final-year projects built for course-mates ──
@@ -135,7 +181,10 @@ const projects: Project[] = [
     blurb:
       "Multimodal AI moderation console: transformer text classifiers and CNN image analysis to flag hate speech, harassment, and violence in real time.",
     stack: ["React", "Transformers", "CNN"],
-    links: [{ label: "GitHub", url: "https://github.com/Muaishaq/sparkle-mind-render" }],
+    links: [
+      { label: "Live", url: "https://sparkle-mind-render.lovable.app" },
+      { label: "GitHub", url: "https://github.com/Muaishaq/sparkle-mind-render" },
+    ],
   },
   {
     category: "Client",
@@ -144,7 +193,10 @@ const projects: Project[] = [
     blurb:
       "AI-powered customer-support chatbot builder. Configure persona, tone, and knowledge in a single editor with a live streaming test chat.",
     stack: ["React", "LLM APIs", "TypeScript"],
-    links: [{ label: "GitHub", url: "https://github.com/Muaishaq/blossom-engine-pro" }],
+    links: [
+      { label: "Live", url: "https://blossom-engine-pro.lovable.app" },
+      { label: "GitHub", url: "https://github.com/Muaishaq/blossom-engine-pro" },
+    ],
   },
   {
     category: "Client",
@@ -153,7 +205,10 @@ const projects: Project[] = [
     blurb:
       "A 9-question instrument measuring how database infrastructure shapes organisational performance — clean interactive flow and public benchmark output.",
     stack: ["React", "TypeScript", "Forms"],
-    links: [{ label: "GitHub", url: "https://github.com/Muaishaq/indy-shine" }],
+    links: [
+      { label: "Live", url: "https://indy-shine.lovable.app" },
+      { label: "GitHub", url: "https://github.com/Muaishaq/indy-shine" },
+    ],
   },
   {
     category: "Client",
@@ -162,7 +217,10 @@ const projects: Project[] = [
     blurb:
       "Machine-learning web app that predicts water potability from physicochemical inputs, with curated dataset and explainable results.",
     stack: ["Python", "ML", "React"],
-    links: [{ label: "GitHub", url: "https://github.com/Muaishaq/pure-spark-creation" }],
+    links: [
+      { label: "Live", url: "https://pure-spark-creation.lovable.app" },
+      { label: "GitHub", url: "https://github.com/Muaishaq/pure-spark-creation" },
+    ],
   },
   {
     category: "Client",
@@ -171,7 +229,10 @@ const projects: Project[] = [
     blurb:
       "Interactive demo exploring ML and NLP concepts for FUDMA 2026 — live visualisations and runnable examples.",
     stack: ["React", "NLP", "ML"],
-    links: [{ label: "GitHub", url: "https://github.com/Muaishaq/pure-charm-engine" }],
+    links: [
+      { label: "Live", url: "https://pure-charm-engine.lovable.app" },
+      { label: "GitHub", url: "https://github.com/Muaishaq/pure-charm-engine" },
+    ],
   },
   {
     category: "Client",
@@ -223,6 +284,128 @@ const projects: Project[] = [
     blurb: "Dynamic DOM color tool for designers exploring palette territory.",
     stack: ["HTML", "CSS", "JavaScript"],
     links: [{ label: "Live", url: "https://muaishaq.github.io/Bg_Color-Changer/" }],
+  },
+
+  // ── Additional vibe-coded builds on Lovable ──
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "NACOS Sports Portal",
+    blurb: "Sports management portal for NACOS FUDMA — fixtures, teams, and results.",
+    stack: ["React", "TypeScript", "Tailwind"],
+    links: [{ label: "Live", url: "https://nacossportsportal.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Bloom Kit Center",
+    blurb: "Rapid concept build — component kit and marketing surface prototype.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://bloom-kit-center.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Heart Full Project",
+    blurb: "Vibe-coded concept build shipped on Lovable.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://heart-full-project.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "PureJoy Blueprint",
+    blurb: "Landing / blueprint prototype — rapid iteration on Lovable.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://purejoy-blueprint.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Seed Build Magic",
+    blurb: "Starter-kit style build exploring generative UI flows.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://seed-build-magic.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Insight Embrace Kit",
+    blurb: "Insight dashboard prototype — data cards and narrative layout.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://insight-embrace-kit.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Wonderbuild Core",
+    blurb: "Product surface prototype built during a rapid Lovable session.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://wonderbuild-core.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Safe Buddy Check",
+    blurb: "Safety / check-in concept flow — quick prototype.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://safe-buddy-check.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Stellar Bloom Experience",
+    blurb: "Motion-forward landing experience prototype.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://stellar-bloom-experience.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Evolve My World",
+    blurb: "Editorial-style narrative site prototype.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://evolve-my-world.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Razor Sharp Defense",
+    blurb: "Security / defense-themed landing prototype.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://razor-sharp-defense.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Sweet Grace Engine",
+    blurb: "Brand engine prototype — typography-led composition.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://sweet-grace-engine.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Cosmic Bloom Core",
+    blurb: "Cosmic aesthetic exploration — background and motion study.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://cosmic-bloom-core.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Joy Juice Factory",
+    blurb: "Playful product landing prototype.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://joy-juice-factory.lovable.app" }],
+  },
+  {
+    category: "Lovable",
+    year: "2026",
+    title: "Sparkle Craft Studio",
+    blurb: "Creative studio-style portfolio prototype.",
+    stack: ["React", "Tailwind"],
+    links: [{ label: "Live", url: "https://sparkle-craft-studio-93.lovable.app" }],
   },
 ];
 
@@ -287,11 +470,11 @@ const certifications = [
 ];
 
 const interests = [
-  { label: "AI Engineering", note: "intelligent systems, real-world problems" },
-  { label: "Full-Stack Dev", note: "end-to-end platforms, DB to front-end" },
+  { label: "AI/ML Engineering", note: "intelligent systems, real-world problems" },
+  { label: "Full-Stack Engneering", note: "end-to-end platforms, DB to front-end" },
   { label: "Robotics", note: "hardware + sensors + intelligent software" },
-  { label: "Forex Trading", note: "technical analysis, global markets" },
-  { label: "Content Creation", note: "sharing the tech journey" },
+  { label: "Forex Trading", note: "technical analysis(SMC+ CRT), global markets" },
+  { label: "Content Creation", note: "sharing thePersonal Journey and educating people on both tech and forex.\u00a0" },
   { label: "Football", note: "5-year team captain" },
 ];
 
@@ -299,7 +482,7 @@ function Index() {
   return (
     <main className="bg-carbon text-white font-sans selection:bg-electric/30 min-h-screen">
       <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-carbon/80 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
           <a href="#top" className="flex items-center gap-3 group">
             <ExcellenceMark className="size-9 text-electric transition-transform duration-500 group-hover:rotate-[20deg]" />
             <span className="font-mono text-xs tracking-tighter uppercase text-zinc-400 group-hover:text-white transition-colors">
@@ -316,24 +499,25 @@ function Index() {
         </div>
       </nav>
 
-      <section id="top" className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
+      <section id="top" className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
         <HeroBackdrop />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-carbon to-transparent pointer-events-none -z-0" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-carbon to-transparent pointer-events-none -z-0" />
-        <div className="relative z-10 grid lg:grid-cols-12 gap-12 items-end fade-up">
+        <div className="relative z-10 grid lg:grid-cols-12 gap-10 lg:gap-12 items-end fade-up">
           <div className="lg:col-span-8">
             <div className="inline-flex items-center gap-2 mb-8 text-[10px] font-mono uppercase tracking-widest text-electric">
               <span className="size-1.5 rounded-full bg-electric animate-pulse" />
               Available for Opportunities
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9]">
+            <h1 className="text-[clamp(2.5rem,11vw,4rem)] md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] md:leading-[0.9]">
               Building Intelligence
               <br />
               <span className="text-zinc-600">for the Next Era.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-zinc-400 max-w-xl leading-relaxed">
               I'm Muhammed Ishaq — AI/ML Engineer and Full-stack engineer based in Nigeria.
-              First Class Computer Science graduate from FUDMA. Builder of TechTrust AI.
+              Computer Science graduate from FUDMA — Second Class Upper, CGPA 4.39, Alhamdulillah.
+              Builder of TechTrust AI.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -369,12 +553,12 @@ function Index() {
       </section>
 
       <section className="border-y border-white/5 bg-zinc-custom/30">
-        <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {[
             ["Years Building", "3+"],
-            ["Projects Shipped", "17+"],
+            ["Projects Shipped", "30+"],
             ["Student President", "2×"],
-            ["Class CS Graduate", "1st"],
+            ["CGPA · CS Graduate", "4.39"],
           ].map(([label, value]) => (
             <div key={label} className="flex flex-col gap-1">
               <span className="text-2xl md:text-3xl font-bold tracking-tight">{value}</span>
@@ -386,7 +570,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="about" className="py-24 px-6 max-w-7xl mx-auto">
+      <section id="about" className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest">// who I am</span>
@@ -396,7 +580,7 @@ function Index() {
           </div>
           <div className="lg:col-span-8 space-y-6 text-zinc-400 leading-relaxed">
             <p>
-              Computer Science graduate from the Federal University Dutsin-Ma (FUDMA), Nigeria, with a deep focus on AI/ML engineering and Full-stack engineering. I designed and built <span className="text-white">TechTrust</span> — an AI-powered developer credential verification platform integrating a MindSpore MLP neural network with GitHub API data. Built as a Team Leader during the Huawei ICT Academy Innovation Competition, reaching the National Finals on January 29, 2026.
+              Computer Science graduate from the Federal University Dutsin-Ma (FUDMA), Nigeria — Second Class Upper with a final CGPA of <span className="text-white">4.39</span>, Alhamdulillah — with a deep focus on AI/ML engineering and Full-stack engineering. I designed and built <span className="text-white">TechTrust</span> — an AI-powered developer credential verification platform integrating a MindSpore MLP neural network with GitHub API data. Built as a Team Leader during the Huawei ICT Academy Innovation Competition, reaching the National Finals on January 29, 2026.
             </p>
             <p>
               Beyond code, I served as President of both my Faculty of Computing and the NACOS
@@ -410,7 +594,7 @@ function Index() {
             <dl className="grid sm:grid-cols-2 gap-6 pt-6 border-t border-white/5">
               <div>
                 <dt className="text-[10px] font-mono text-electric uppercase tracking-widest">Degree</dt>
-                <dd className="mt-1 text-sm">B.Sc. Computer Science, FUDMA</dd>
+                <dd className="mt-1 text-sm">B.Sc. Computer Science, FUDMA — 2:1, CGPA 4.39</dd>
               </div>
               <div>
                 <dt className="text-[10px] font-mono text-electric uppercase tracking-widest">Status</dt>
@@ -418,7 +602,11 @@ function Index() {
               </div>
               <div>
                 <dt className="text-[10px] font-mono text-electric uppercase tracking-widest">Email</dt>
-                <dd className="mt-1 text-sm font-mono break-all">techiemuaishaq@gmail.com</dd>
+                <dd className="mt-1 text-sm font-mono break-all leading-relaxed">
+                  techiemuaishaq@gmail.com
+                  <br />
+                  muhammedishaqjamb20@gmail.com
+                </dd>
               </div>
               <div>
                 <dt className="text-[10px] font-mono text-electric uppercase tracking-widest">Phone</dt>
@@ -429,14 +617,14 @@ function Index() {
         </div>
       </section>
 
-      <section id="skills" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <div className="flex justify-between items-baseline mb-16">
+      <section id="skills" className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="flex flex-wrap justify-between items-baseline gap-3 mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Technical Stack</h2>
           <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest">
             Pro-Level Proficiency
           </span>
         </div>
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {skillGroups.map((group) => (
             <div key={group.title} className="space-y-6">
               <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-500">
@@ -473,8 +661,8 @@ function Index() {
         </div>
       </section>
 
-      <section id="work" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <div className="grid lg:grid-cols-2 gap-16 items-center bg-zinc-custom/50 p-8 md:p-16 border border-white/5">
+      <section id="work" className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center bg-zinc-custom/50 p-6 sm:p-8 md:p-16 border border-white/5">
           <div className="space-y-8">
             <div className="inline-block px-3 py-1 border border-electric/30 text-[10px] font-mono text-electric uppercase tracking-widest">
               ★ Flagship Project
@@ -514,7 +702,7 @@ function Index() {
               </a>
             </div>
           </div>
-          <pre className="w-full aspect-square bg-carbon border border-white/10 p-6 overflow-auto text-[10px] md:text-xs font-mono text-zinc-500 leading-relaxed whitespace-pre">
+          <pre className="w-full aspect-square bg-carbon border border-white/10 p-6 overflow-x-auto text-[9px] sm:text-[10px] md:text-xs font-mono text-zinc-500 leading-relaxed whitespace-pre">
 {`┌───────────────────────────────────┐
 │     TechTrust Architecture        │
 ├───────────────────────────────────┤
@@ -540,7 +728,7 @@ function Index() {
               key={p.title}
               className="bg-carbon p-8 group hover:bg-zinc-custom/40 transition-colors"
             >
-              <div className="flex justify-between items-baseline mb-4">
+              <div className="flex flex-wrap justify-between items-baseline gap-2 mb-4">
                 <span className="text-[10px] font-mono text-electric uppercase tracking-widest">
                   {p.year}
                 </span>
@@ -578,8 +766,8 @@ function Index() {
         </div>
       </section>
 
-      <section id="leadership" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <div className="flex justify-between items-baseline mb-16">
+      <section id="leadership" className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="flex flex-wrap justify-between items-baseline gap-3 mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Leadership & Impact</h2>
           <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest">// earned</span>
         </div>
@@ -611,9 +799,9 @@ function Index() {
         </div>
       </section>
 
-      <section id="journey" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+      <section id="journey" className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-white/5">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-16">Education & Experience</h2>
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           <div>
             <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-500 mb-8">
               // education
@@ -623,7 +811,7 @@ function Index() {
                 period="2022 – 2026"
                 title="B.Sc. Computer Science"
                 place="Federal University Dutsin-Ma (FUDMA), Katsina State"
-                detail="Software Dev · DSA · AI/ML · Cloud Computing · Cybersecurity · Systems Analysis · Data Mining · Simulation."
+                detail="Full-Stack Engr · DSA · AI/ML · Cloud Computing · Cybersecurity · Systems Analysis · Data Mining · Simulation."
               />
               <TimelineItem
                 period="2024 – 2025"
@@ -648,7 +836,7 @@ function Index() {
                 period="2023 – Present"
                 title="Freelance Web Developer"
                 place="Self-Employed"
-                detail="Building responsive custom websites using HTML, CSS, JS, and Node.js."
+                detail="Building responsive custom websites using HTML, CSS, JS, React, Tailwind and Node.js."
               />
               <TimelineItem
                 period="2025"
@@ -671,8 +859,8 @@ function Index() {
         </div>
       </section>
 
-      <section id="certifications" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <div className="flex justify-between items-baseline mb-16">
+      <section id="certifications" className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="flex flex-wrap justify-between items-baseline gap-3 mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Verified Learning</h2>
           <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest">08 Credentials</span>
         </div>
@@ -680,7 +868,7 @@ function Index() {
           {certifications.map((c) => {
             const card = (
               <div className="bg-carbon p-6 space-y-3 hover:bg-zinc-custom/40 transition-colors h-full">
-                <div className="flex justify-between items-center">
+                <div className="flex flex-wrap justify-between items-center gap-2">
                   <span className="size-6 border border-electric/40 text-electric flex items-center justify-center text-xs">
                     ✓
                   </span>
@@ -707,7 +895,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+      <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-white/5">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-16">Beyond Code</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
           {interests.map((it) => (
@@ -721,7 +909,7 @@ function Index() {
 
       <footer id="contact" className="py-32 px-6 border-t border-white/5 text-center">
         <ExcellenceMark className="size-12 text-electric mx-auto mb-8" />
-        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter mb-12">
+        <h2 className="text-[clamp(2.25rem,10vw,3.5rem)] md:text-7xl font-bold tracking-tighter mb-12">
           Let's build the
           <br />
           <span className="italic text-electric">future together.</span>
@@ -734,6 +922,9 @@ function Index() {
           <a href="mailto:techiemuaishaq@gmail.com" className="text-zinc-400 hover:text-white transition-colors font-mono">
             techiemuaishaq@gmail.com
           </a>
+          <a href="mailto:muhammedishaqjamb20@gmail.com" className="text-zinc-400 hover:text-white transition-colors font-mono">
+            muhammedishaqjamb20@gmail.com
+          </a>
           <a href="tel:+2348068638021" className="text-zinc-400 hover:text-white transition-colors font-mono">
             +234 806 863 8021
           </a>
@@ -742,7 +933,9 @@ function Index() {
           <a href="https://linkedin.com/in/muaishaq" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">LinkedIn</a>
           <a href="https://github.com/muaishaq" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">GitHub</a>
           <a href="https://twitter.com/muaishaq" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">Twitter / X</a>
-          <a href="https://instagram.com/techie_muaisaq" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">Instagram</a>
+          <a href="https://instagram.com/muaishaq" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">Instagram · @muaishaq</a>
+          <a href="https://instagram.com/techiemuaishaq" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">Instagram · @techiemuaishaq</a>
+          <a href="https://www.youtube.com/channel/UCNFd2UENwxUTvWjsc9FoPPA" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">YouTube · Channel</a>
         </div>
         <p className="mt-24 text-[10px] font-mono text-zinc-700 uppercase tracking-widest">
           © 2026 Muhammed Ishaq — Keffi, Nigeria
