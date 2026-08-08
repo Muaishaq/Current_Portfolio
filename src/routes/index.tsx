@@ -527,7 +527,7 @@ function Index() {
                 View Work
               </a>
               <a
-                href="/cv/Muhammed_Ishaq_CV.htm"
+                href="public/cv/Muhammed_Ishaq_CV .pdf"
                 download
                 className="px-8 py-4 border border-white/10 text-white text-sm font-bold uppercase tracking-widest rounded-sm hover:bg-white/5 transition-all"
               >
